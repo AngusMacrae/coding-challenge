@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Challenge</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: sans-serif;
+            color: #444;
+            line-height: 1.4;
+        }
+
+        main {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        pre {
+            text-align: left;
+            background-color: #ddd;
+            padding: 1em;
+        }
+
+        p {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Kronos Coding Challenge - Angus Macrae</h1>
+        <h2>Question 1:</h2>
+        <p>The code used is shown below. See the browser console log for the output.</p>
+        <pre>
+Aobject = function () {
+    this.name = 'KRONOSTOKEN';
+}
+
+A = function () {
+    if (typeof a !== 'undefined') {
+        return a;
+    } else {
+        return new Aobject;
+    }
+}
+
+a = new A();
+b = new A();
+
+console.log(a === b);
+console.log(typeof a);
+console.log(a.name === 'KRONOSTOKEN');
+</pre>
+        <h2>Question 2:</h2>
+        <p>Use the file picker below to select the data files. They will be merged and sorted, and then the result will
+            be
+            output as a new csv file named dataOut.</p>
+        <p>Any number of files may be selected, but they must be of the same format (i.e. records separated by new
+            lines,
+            fields separated by semicolons, sort field as first field, and field headers as the first row).</p>
+        <input type="file" id="file-selector" multiple onchange="mergeCsv(this)">
+        <h2>Question 3:</h2>
+        <p>Method 1 uses callbacks while method 2 uses async/await which is based on promises.</p>
+        <p>The console output of both functions will be the same, and neither of them explicitly return anything. But,
+            since method 2 is an async function, it implicity returns a promise. Therefore we can add a .then()
+            statement afterwards if we want to queue up some code to be run after method 2 has completed.</p>
+        <p>Since method 1 is a regular function we have no way to tell whether it has completed or not.</p>
+    </main>
+    <script src="filesaver.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
